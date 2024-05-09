@@ -1,0 +1,245 @@
+body > section#membership {
+    height: 600px;
+    box-shadow: 0px 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+body > section {
+    background-color: #d5a187;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+body > #h1main {
+    background-color: #d5a187;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: -5px;
+}
+
+
+h1, h2, h3, p {
+    text-align: center;
+}
+#packages {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    max-width: 100%;
+}
+
+article {
+    background-color: #162836;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    color: beige;
+    max-width: 100%;
+    box-shadow: 0px 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+article h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: beige;
+    text-decoration: underline;
+}
+
+article h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #007bff;
+}
+
+article p {
+    font-size: 16px;
+    line-height: 0%;
+    color: beige;
+}
+
+/* Add bullet points to each sentence */
+article p {
+    margin-bottom: 15px;
+}
+
+article p > li::before {
+    content: "• ";
+    color: #007bff;
+    margin-right: 5px;
+}
+
+/* Positions of each label */
+
+form#membershipForm {
+    display: flex;
+    height: auto;
+    width: 100%;
+    position: relative;
+    flex-direction: column;
+    margin-top: -40px;
+    font-family: "Inria Serif";
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 1.6px;
+}
+
+/* Membership Selector Style */
+form > div.membershipselector > select {
+    width: 760px;
+    height: 40px;
+    position: relative;
+    border-radius: 8px;
+}
+div.membershipselector{
+    width: 300px;
+    height: 40px;
+    position: relative;
+    top: 45px;
+    left: 0%;
+}
+
+/* Name Style */
+form > div.name > input{
+    width: 340px;
+    height: 40px;
+    position: relative;
+    border-radius: 8px;
+}
+div.name{
+    width: 300px;
+    height: 40px;
+    position: relative;
+    top: 70px;
+    left: 0%;
+}
+
+/* Email Style */
+form > div.email > input{
+    width: 400px;
+    height: 40px;
+    position: relative;
+    border-radius: 8px;
+}
+div.email{
+    width: 300px;
+    height: 40px;
+    position: relative;
+    top: 30px;
+    left: 360px;
+}
+
+/* Phone Style */
+form > div.phone > input{
+    width: 380px;
+    height: 40px;
+    position: relative;
+    border-radius: 8px;
+}
+div.phone{
+    width: 300px;
+    height: 40px;
+    position: relative;
+    top: 60px;
+    left: 0%;
+}
+
+/* Gender Style */
+form > div.gender > select{
+    width: 340px;
+    height: 40px;
+    position: relative;
+    border-radius: 8px;
+}
+div.gender{
+    width: 300px;
+    height: 40px;
+    position: relative;
+    top: 20px;
+    left: 420px;
+}
+
+/* Current Weight Style */
+form > div.c-weight > input{
+    width: 350px;
+    height: 40px;
+    position: relative;
+    border-radius: 8px;
+}
+div.c-weight{
+    width: 300px;
+    height: 40px;
+    position: relative;
+    top: 50px;
+    left: 0%;
+}
+
+/* Desired Weight Style */
+form > div.d-weight > input{
+    width: 350px;
+    height: 40px;
+    position: relative;
+    border-radius: 8px;
+}
+div.d-weight{
+    width: 300px;
+    height: 40px;
+    position: relative;
+    top: 10px;
+    left: 54%;
+}
+
+/* Height Style */
+form > div.height > input{
+    width: 350px;
+    height: 40px;
+    position: relative;
+    border-radius: 8px;
+}
+div.height{
+    width: 300px;
+    height: 40px;
+    position: relative;
+    top: 40px;
+    left: 0%;
+}
+
+/* Age Style */
+form > div.age > input{
+    width: 350px;
+    height: 40px;
+    position: relative;
+    border-radius: 8px;
+}
+div.age{
+    width: 300px;
+    height: 40px;
+    position: relative;
+    top: 0px;
+    left: 54%;
+}
+
+/* Home Style */
+form > div.home > textarea{
+    width: 760px;
+    height: 50px;
+    position: relative;
+    border-radius: 8px;
+}
+div.home{
+    width: 300px;
+    height: 40px;
+    position: relative;
+    top: 30px;
+    left: 0%;
+}
+
+/* Submit Style */
+form > button{
+    width: 760px;
+    height: 50px;
+    position: relative;
+    border-radius: 8px;
+    top: 80px;
+    left: 0%;
+}

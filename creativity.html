@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creativity - Gym Website</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="creativity.css" rel="stylesheet">
+    <!-- Add any additional CSS or external libraries here -->
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav>
+    <ul>
+        <li><a href="index.html">About Us</a></li>
+        <li><a href="membership.html">Membership Form</a></li>
+        <li><a href="creativity.html">Creativity</a></li>
+    </ul>
+</nav>
+
+<img src="banner.png" alt="PowerUp Fitness">
+
+<!-- Creative Display -->
+<section id="creativity">
+    <div class="container">
+        <h2>Membership Packages</h2>
+        <div id="pkgimage">
+            <img src="pkg1.png" alt="Membership Package 1">
+            <img src="pkg2.png" alt="Membership Package 2">
+            <img src="pkg3.png" alt="Membership Package 3">
+            <!-- Add more images for different membership packages -->
+        </div>
+        <h2>GYM</h2>
+        <div id="gymimage">
+            <img src="gym1.jpg" alt="Gym Image 1">
+            <img src="gym2.jpg" alt="Gym Image 2">
+            <img src="gym3.jpg" alt="Gym Image 3">
+            <!-- Add more images of the gym -->
+        </div>
+    </div>
+</section>
+
+<!-- JavaScript for Slideshow -->
+<script>
+    var slideIndex = 0;
+    carousel();
+
+    function carousel() {
+        var i;
+        var slides = document.querySelectorAll("#pkgimage img");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(carousel, 3000); // Change image every 3 seconds
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership Form - Gym Website</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="membership.css" rel="stylesheet">
+    <!-- Add any additional CSS or external libraries here -->
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav>
+    <ul>
+        <li><a href="index.html">About Us</a></li>
+        <li><a href="membership.html">Membership Form</a></li>
+        <li><a href="creativity.html">Creativity</a></li>
+    </ul>
+</nav>
+
+<img src="banner.png" alt="PowerUp Fitness">
+<h1 id="h1main">Membership Packages</h1>
+<section id="packages">
+<article>
+    <h1>Basic Package</h1>
+    <h3>$30/month</h3>
+    <p>
+        Features:
+        <li>Access to gym facilities during regular hours</li>
+        <li>Use of cardio and strength training equipment</li>
+        <li>Group fitness classes (limited selection)</li>
+        <li>Personalized fitness assessment</li>
+        <li>Discounted rates on personal training sessions</li><br>
+        Ideal For: Beginners and casual gym-goers looking for a budget-friendly option to kickstart their fitness journey.
+    </p>
+</article>
+
+<article>
+    <h1>Premium Package</h1>
+    <h3>$50/month</h3>
+    <p>
+        Features:
+        <li>Unlimited access to gym facilities, including extended hours</li>
+        <li>Wide range of group fitness classes, including yoga, Pilates, and HIIT</li>
+        <li>Complimentary personal training session upon signup</li>
+        <li>Monthly fitness workshops and seminars</li>
+        <li>Access to sauna and steam room facilities</li><br>
+        Ideal For: Fitness enthusiasts seeking a comprehensive membership with additional perks and amenities.
+    </p>
+</article>
+
+<article>
+    <h1>VIP Package</h1>
+    <h3>$100/month</h3>
+    <p>
+        Features:
+        <li>All benefits of the Premium Package</li>
+        <li>Priority booking for personal training sessions and group classes</li>
+        <li>Exclusive access to VIP lounge with complimentary refreshments</li>
+        <li>Quarterly one-on-one sessions with a nutritionist</li>
+        <li>Discounted rates on merchandise and supplements</li><br>
+        Ideal For: Individuals committed to achieving their fitness goals with personalized support and luxury amenities.
+    </p>
+</article>
+</section>
+<!-- Membership Form -->
+<section id="membership">
+    <div class="container">
+        <h2>Membership Sign-up Form</h2>
+        <form id="membershipForm" action="#" method="post" onsubmit="return validateForm()">
+           
+            <div class="membershipselector">
+            <!-- Membership Package Selection -->
+            <label for="membership-package">Membership Package:</label>
+            <select id="membership-package" name="membership-package" required>
+                <option value="">Select</option>
+                <option value="basic">Basic Package</option>
+                <option value="premium">Premium Package</option>
+                <option value="vip">VIP Package</option>
+            </select>
+            </div>
+
+            <div class="name">
+                <!-- Name -->
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="email">
+                <!-- Email -->
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+            </div>
+            
+            <div class="phone">
+                <!-- Phone Number -->
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required><br>
+            </div>
+
+            <div class="gender">
+                <!-- Gender -->
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select><br>
+            </div>
+            
+            <div class="c-weight">
+                <!-- Current Weight -->
+                <label for="current-weight">Current Weight (lbs):</label>
+                <input type="number" id="current-weight" name="current-weight" required><br>
+            </div>
+            
+            <div class="d-weight">
+                <!-- Desired Weight -->
+                <label for="desired-weight">Desired Weight (lbs):</label>
+                <input type="number" id="desired-weight" name="desired-weight" required><br>
+            </div>
+            
+            <div class="height">
+                <!-- Height -->
+                <label for="height">Height:</label>
+                <input type="number" id="height" name="height" required><br>
+            </div>
+            
+            <div class="age">
+                <!-- Age -->
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required><br>
+            </div>
+            
+            <div class="home">
+                <!-- Home Address -->
+                <label for="address">Home Address:</label>
+                <textarea id="address" name="address" required></textarea><br>
+            </div>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</section>
+
+<!-- JavaScript for Form Validation -->
+<script>
+    function validateForm() {
+        // Retrieve form input values
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var phone = document.getElementById("phone").value;
+        var currentWeight = document.getElementById("current-weight").value;
+        var desiredWeight = document.getElementById("desired-weight").value;
+        var height = document.getElementById("height").value;
+        var gender = document.getElementById("gender").value;
+        var age = document.getElementById("age").value;
+        var address = document.getElementById("address").value;
+        var package = document.getElementById("membership-package").value;
+
+        // Validate Name
+        if (name === "") {
+            alert("Please enter your name");
+            return false;
+        }
+
+        // Validate Email
+        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+            alert("Please enter a valid email address");
+            return false;
+        }
+
+        // Validate Phone Number
+        var phonePattern = /^\d{10}$/;
+        if (!phonePattern.test(phone)) {
+            alert("Please enter a valid 10-digit phone number");
+            return false;
+        }
+
+        // Validate Current Weight
+        if (currentWeight === "" || isNaN(currentWeight)) {
+            alert("Please enter a valid current weight");
+            return false;
+        }
+
+        // Validate Desired Weight
+        if (desiredWeight === "" || isNaN(desiredWeight)) {
+            alert("Please enter a valid desired weight");
+            return false;
+        }
+
+        // Validate Height
+        if (height === "" || isNaN(height)) {
+            alert("Please enter a valid height");
+            return false;
+        }
+
+        // Validate Gender
+        if (gender === "") {
+            alert("Please select your gender");
+            return false;
+        }
+
+        // Validate Age
+        if (age === "" || isNaN(age)) {
+            alert("Please enter a valid age");
+            return false;
+        }
+
+        // Validate Address
+        if (address === "") {
+            alert("Please enter your home address");
+            return false;
+        }
+
+        // Validate Membership Package
+        if (package === "") {
+            alert("Please select a membership package");
+            return false;
+        }
+
+        // If all fields are valid, return true
+        return true;
+    }
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+#pkgimage > img {
+    width: 100%;
+    box-shadow: #162836 0px 10px 15px;
+}
+#gymimage > img {
+    text-align: center;
+    width: 100%;
+    box-shadow: #162836 0px 10px 15px;
+    margin-bottom: 5px;
+}
+#creativity > div > h2 {
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+    text-decoration: underline;
+}
+
+body > section {
+    background-color: #d5a187;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
